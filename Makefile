@@ -21,12 +21,12 @@
 CUDA_VERSION ?= 11.4.2
 DOCKER ?= docker
 ifeq ($(IMAGE),)
-REGISTRY ?= nvidia
+REGISTRY ?= quay.io/mgiessing
 IMAGE := $(REGISTRY)/k8s-driver-manager
 endif
 
 # Must be set externally before invoking
-VERSION ?= v0.1.0
+VERSION ?= v0.2.0
 
 ##### Public rules #####
 TARGETS := ubi8

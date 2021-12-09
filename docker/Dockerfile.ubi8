@@ -19,7 +19,7 @@ FROM nvidia/cuda:${CUDA_VERSION}-base-${BASE_DIST}
 RUN dnf install -y kmod
 
 # Install K8s client to fetch node resources, cluster version and to perform cleanup of pods for driver unload
-RUN curl -o /usr/bin/kubectl -L "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl";
+RUN curl -o /usr/bin/kubectl -L "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/ppc64le/kubectl";
 RUN chmod a+x /usr/bin/kubectl
 
 COPY driver-manager /usr/local/bin
